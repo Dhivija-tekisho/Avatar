@@ -1,0 +1,30 @@
+# Package versions for avatar-ui-next (Next.js/React project)
+# Note: For Node.js projects, dependencies are managed via package.json
+# This file is for reference only - Python-style requirements.txt
+
+# To install all dependencies, run: npm install
+
+# Core Framework
+next==16.0.0
+react==19.2.0
+react-dom==19.2.0
+
+# LiveKit Integration
+livekit-client==2.15.13
+livekit-server-sdk==2.14.0
+
+# Development Dependencies
+typescript==5.x
+@types/node==20.x
+@types/react==19.x
+@types/react-dom==19.x
+tailwindcss==4.x
+@tailwindcss/postcss==4.x
+eslint==9.x
+eslint-config-next==16.0.0
+
+# Installation Instructions:
+# 1. Ensure Node.js 18+ is installed
+# 2. Run: npm install
+# 3. For development: npm run dev
+# 4. For production build: npm run build
