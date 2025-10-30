@@ -366,11 +366,11 @@ async def entrypoint(ctx: agents.JobContext):
                 noise_cancellation=noise_cancellation.BVC(),
             ),
             room_output_options=RoomOutputOptions(
-                audio_enabled=False,  # Tavus handles audio
+                audio_enabled=True,  # Tavus handles audio
                 transcription_enabled=True,  # Enable LiveKit transcription
             ),
         )
-        logger.info("✅ Session started with transcription enabled (audio_enabled=False for Tavus)")
+        logger.info("✅ Session started with transcription enabled (audio_enabled= for Tavus)")
 
         # Generate initial greeting
         await session.generate_reply(instructions=SESSION_INSTRUCTION)
