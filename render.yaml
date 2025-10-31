@@ -1,0 +1,44 @@
+# Exported from Render on 2025-10-31T09:42:36Z
+version: "1"
+projects:
+- name: My project
+  environments:
+  - name: Production
+    services:
+    - type: web
+      name: AVATAR_UPDATED
+      runtime: python
+      repo: https://github.com/Dhivija-tekisho/AVATAR_UPDATED
+      plan: free
+      envVars:
+      - key: PINECONE_ENV
+        sync: false
+      - key: PINECONE_INDEX_NAME
+        sync: false
+      - key: PINECONE_API_KEY
+        sync: false
+      - key: GOOGLE_API_KEY
+        sync: false
+      - key: SUPABASE_KEY
+        sync: false
+      - key: SUPABASE_URL
+        sync: false
+      - key: TAVUS_REPLICA_ID
+        sync: false
+      - key: TAVUS_PERSONA_ID
+        sync: false
+      - key: TAVUS_API_KEY
+        sync: false
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: LIVEKIT_API_SECRET
+        sync: false
+      - key: LIVEKIT_API_KEY
+        sync: false
+      - key: LIVEKIT_URL
+        sync: false
+      region: singapore
+      buildCommand: pip install -r requirements.txt
+      startCommand: ' gunicorn server:app --bind 0.0.0.0:$PORT --workers 1'
+      autoDeployTrigger: commit
+      rootDir: backend
